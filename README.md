@@ -1,6 +1,6 @@
 # In Falsus 主题插件
 
-把《In Falsus》的界面语言套到 DeepSeek Harness 上：深板岩底、冷青主色、品红点缀、碎玻璃棱镜品牌标、切角薄板，以及一段开场影片。
+把《In Falsus》的界面UI套到 DeepSeek Harness 上，在全新的世界进行名为“心域探潜”的深度求索。
 
 ## 安装
 
