@@ -8,7 +8,7 @@
 
 | 来源 | spec 示例 |
 |---|---|
-| GitHub | `github:用户名/in-falsus-theme`，或整条 `https://github.com/用户名/in-falsus-theme` |
+| GitHub | `github:Tukuyomi114/in-falsus-theme`，或整条 `https://github.com/Tukuyomi114/in-falsus-theme` |
 | npm | 包名，例如 `dsh-theme-in-falsus` |
 | 本地目录（开发用） | `link:C:/绝对/路径/in-falsus-theme` |
 
