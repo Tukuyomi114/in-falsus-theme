@@ -23,38 +23,116 @@ import { fileURLToPath } from 'node:url';
 const MEDIA_DIR = join(dirname(fileURLToPath(import.meta.url)), 'media');
 
 const TOKENS = [
-  ['--dsw-alias-bg-base', '#EEF3F6', '#06080D'],
-  ['--dsw-alias-bg-layer-1', '#FFFFFF', '#0C131B'],
-  ['--dsw-alias-bg-layer-2', '#F3F7F9', '#121C26'],
-  ['--dsw-alias-bg-overlay', 'rgba(255, 255, 255, 0.96)', 'rgba(12, 19, 27, 0.94)'],
-  ['--dsw-alias-border-l1', 'rgba(20, 64, 78, 0.14)', 'rgba(148, 196, 214, 0.18)'],
-  ['--dsw-alias-border-l2', 'rgba(20, 64, 78, 0.24)', 'rgba(148, 196, 214, 0.34)'],
-  ['--dsw-alias-brand-primary', '#17616F', '#5FD0E4'],
-  ['--dsw-alias-label-primary', '#10202A', '#EAF3F6'],
-  ['--dsw-alias-label-secondary', '#526B78', '#93A8B6'],
-  ['--dsw-alias-state-error-primary', '#C42A4A', '#FF4D7D'],
-  ['--dsw-alias-state-idle-primary', '#8A9AA4', '#5C6F7B'],
-  ['--dsw-alias-state-success-primary', '#1F8A76', '#6FD3C0'],
-  ['--dsw-alias-state-warn-primary', '#9A6A25', '#D9A15F'],
-  ['--dsw-specific-sidebar-fill', '#E6EEF2', '#03050A'],
+  ['--dsw-alias-bg-base', '#200A0E', '#0A1520'],
+  ['--dsw-alias-bg-layer-1', '#280E13', '#0E1B28'],
+  ['--dsw-alias-bg-layer-2', '#34141A', '#142434'],
+  ['--dsw-alias-bg-overlay', 'rgba(32, 10, 14, 0.95)', 'rgba(10, 21, 32, 0.95)'],
+  ['--dsw-alias-bg-mask-1', 'rgba(64, 20, 36, 0.26)', null],
+  ['--dsw-alias-border-l1', 'rgba(220, 120, 170, 0.22)', 'rgba(120, 200, 220, 0.22)'],
+  ['--dsw-alias-border-l2', 'rgba(220, 120, 170, 0.40)', 'rgba(120, 200, 220, 0.40)'],
+  ['--dsw-alias-brand-primary', '#F56FBB', '#6FE3F5'],
+  ['--dsw-alias-label-primary', '#F8EAF2', '#EAF6F8'],
+  ['--dsw-alias-label-secondary', '#C29AA8', '#9AB4C2'],
+  ['--dsw-alias-state-error-primary', '#FF5C86', '#FF5C86'],
+  ['--dsw-alias-state-idle-primary', '#865F6A', '#5F7686'],
+  ['--dsw-alias-state-success-primary', '#E06FD8', '#6FE0C6'],
+  ['--dsw-alias-state-warn-primary', '#E0A860', '#E0A860'],
+  ['--dsw-alias-bg-layer-3', '#F3D5E0', null],
+  ['--dsw-alias-bg-layer-4', '#F7DFE8', null],
+  ['--dsw-alias-border-l3', 'rgba(88, 20, 37, 0.18)', null],
+  ['--dsw-alias-border-l4', 'rgba(88, 20, 37, 0.13)', null],
+  ['--dsw-alias-interactive-bg-hover', 'rgba(179, 34, 87, 0.10)', null],
+  ['--dsw-alias-interactive-bg-hover-solid', '#DDB2C2', null],
+  ['--dsw-alias-state-business-primary', '#871532', null],
+  ['--dsw-alias-separator-primary', 'rgba(88, 20, 37, 0.16)', null],
+  ['--dsw-alias-settings-card-fill', '#F6DCE5', null],
+  ['--dsw-specific-menu', '#F6DCE5', null],
+  ['--dsw-alias-markdown-code-block', '#EDC6D4', null],
+  ['--dsw-alias-markdown-code-block-banner', '#E6B9C9', null],
+  ['--dsw-alias-markdown-inline-code', 'rgba(179, 34, 87, 0.08)', null],
+  ['--dsw-alias-label-tertiary', '#A5788A', null],
+  ['--dsw-alias-label-quaternary', '#8F6577', null],
+  ['--dsw-alias-label-caption', '#8F6577', null],
+  ['--dsw-alias-label-dimmed', 'rgba(248, 234, 242, 0.55)', null],
+  ['--dsw-alias-label-primary-dimmed', 'rgba(248, 234, 242, 0.62)', null],
+  ['--dsw-alias-label-primary-foreground', '#200A0E', null],
+  ['--dsw-alias-label-primary-inverted', '#200A0E', null],
+  ['--dsw-alias-label-primary-bluish', '#F8EAF2', null],
+  ['--dsw-alias-label-error', '#FF5C86', null],
+  ['--dsw-alias-link', '#FF7FB4', null],
+  ['--dsw-alias-fill-l1', 'rgba(255, 190, 214, 0.05)', null],
+  ['--dsw-alias-fill-l2', 'rgba(255, 190, 214, 0.09)', null],
+  ['--dsw-alias-bg-skeleton', 'rgba(255, 190, 214, 0.08)', null],
+  ['--dsw-alias-bg-l1', '#22090F', null],
+  ['--dsw-alias-bg-module-platform', '#2A0E15', null],
+  ['--dsw-alias-bg-document-preview', '#2A0E15', null],
+  ['--dsw-alias-bg-mask-drop', 'rgba(0, 0, 0, 0.28)', null],
+  ['--dsw-alias-border-inverted', 'rgba(255, 255, 255, 0.18)', null],
+  ['--dsw-specific-bubble', '#33121A', null],
+  ['--dsw-specific-input-major', '#2A0E15', null],
+  ['--dsw-specific-selector', '#33121A', null],
+  ['--dsw-specific-sidebar-nav-item-hover', 'rgba(245, 111, 187, 0.10)', null],
+  ['--dsw-specific-sidebar-nav-item-active', 'rgba(245, 111, 187, 0.16)', null],
+  ['--dsw-alias-button-elevated-fill', '#2E1017', null],
+  ['--dsw-alias-button-floating-fill', 'rgba(42, 14, 21, 0.90)', null],
+  ['--dsw-alias-button-floating-hover', '#3A1420', null],
+  ['--dsw-alias-button-primary-fill', '#F56FBB', null],
+  ['--dsw-alias-button-primary-hover', '#FF8FC8', null],
+  ['--dsw-alias-button-contrast-fill', '#F8EAF2', null],
+  ['--dsw-alias-button-info-fill', 'rgba(245, 111, 187, 0.12)', null],
+  ['--dsw-alias-button-info-hover', 'rgba(245, 111, 187, 0.18)', null],
+  ['--dsw-alias-button-tool-bar-fill', 'transparent', null],
+  ['--dsw-alias-button-tool-bar-hover', 'rgba(245, 111, 187, 0.12)', null],
+  ['--dsw-alias-menu-icon', '#C29AA8', null],
+  ['--dsw-alias-menu-group-header-fill', '#33121A', null],
+  ['--dsw-alias-scrollbar-bg-l1', 'rgba(255, 160, 190, 0.12)', null],
+  ['--dsw-alias-scrollbar-bg-l2', 'rgba(255, 160, 190, 0.18)', null],
+  ['--dsw-alias-scrollbar-hover-l2', 'rgba(255, 160, 190, 0.28)', null],
+  ['--dsw-alias-state-business-tertiary', 'rgba(245, 111, 187, 0.18)', null],
+  ['--dsw-alias-state-success-secondary', 'rgba(111, 224, 180, 0.18)', null],
+  ['--dsw-alias-state-warn-label', '#E0A860', null],
+  ['--dsw-alias-state-warn-tertiary', 'rgba(224, 168, 96, 0.18)', null],
+  ['--dsw-alias-code-diff-added', 'rgba(111, 224, 180, 0.12)', null],
+  ['--dsw-alias-code-diff-deleted', 'rgba(255, 92, 134, 0.12)', null],
+  ['--dsw-alias-markdown-tag', 'rgba(245, 111, 187, 0.16)', null],
+  ['--dsw-alias-toast-bg', '#F8EAF2', null],
+  ['--dsw-alias-toast-label', '#200A0E', null],
+  ['--dsw-alias-tooltip-bg', '#F8EAF2', null],
+  ['--dsw-alias-tooltip-key-bg', 'rgba(32, 10, 14, 0.16)', null],
+  ['--dsw-alias-switch-thumb', '#F8EAF2', null],
+  ['--dsw-alias-settings-card-stroke', 'rgba(255, 160, 190, 0.14)', null],
+  ['--dsw-specific-sidebar-fill', '#21080E', '#081521'],
 ];
 
-const lightBlock = TOKENS.map(([name, light]) => `  ${name}: ${light} !important;`).join('\n');
-const darkBlock = TOKENS.map(([name, , dark]) => `  ${name}: ${dark} !important;`).join('\n');
+// Keep this palette in step with the same table in client.js.
+// Column 1 is the light skin, column 2 the dark one; a null drops the token
+// from that skin instead of emitting an empty declaration.
+const block = (column) => TOKENS
+  .filter((row) => typeof row[column] === 'string')
+  .map((row) => `  ${row[0]}: ${row[column]} !important;`)
+  .join('\n');
 
-const CSS = `/* In Falsus theme — palette layer. Light (paper white) is the default;
-   dark is selected through the body attribute the ui-theme bootstrap sets. */
-html:not([data-ds-dark-theme]) body:not([data-ds-dark-theme]) {
-${lightBlock}
-}
-html[data-ds-dark-theme],
-body[data-ds-dark-theme] {
-${darkBlock}
-}
-html body {
+const LIGHT_SCOPE = 'body:not([data-ds-dark-theme])';
+const DARK_SCOPE = 'body[data-ds-dark-theme]';
+
+const CSS = `/* In Falsus theme — palette layer. Two skins: wine red for light (a dark
+   surface palette), slate with cyan for dark. The scheme is published on
+   <body> by the ui-theme bootstrap. */
+${LIGHT_SCOPE} {
+${block(1)}
   background-color: var(--dsw-alias-bg-base) !important;
   background-image:
-    radial-gradient(1100px 720px at 92% -12%, rgba(95, 208, 228, 0.10), transparent 62%),
+    linear-gradient(180deg, rgba(46, 20, 30, 0.55), rgba(32, 10, 14, 0.75) 46%, rgba(20, 6, 9, 0.95)),
+    radial-gradient(1100px 720px at 92% -12%, rgba(245, 111, 187, 0.10), transparent 62%),
+    radial-gradient(900px 640px at 4% 108%, rgba(255, 77, 125, 0.10), transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+${DARK_SCOPE} {
+${block(2)}
+  background-color: var(--dsw-alias-bg-base) !important;
+  background-image:
+    linear-gradient(225deg, rgba(226, 200, 206, 0.26), rgba(226, 200, 206, 0.08) 42%, transparent 72%),
+    radial-gradient(1100px 720px at 92% -12%, rgba(228, 95, 168, 0.10), transparent 62%),
     radial-gradient(900px 640px at 4% 108%, rgba(255, 77, 125, 0.06), transparent 60%) !important;
   background-attachment: fixed !important;
 }
@@ -67,7 +145,10 @@ main,
   width: 30px !important;
   height: 30px !important;
 }
-::selection {
+${LIGHT_SCOPE} ::selection {
+  background-color: rgba(194, 42, 98, 0.20);
+}
+${DARK_SCOPE} ::selection {
   background-color: rgba(95, 208, 228, 0.28);
 }
 `;

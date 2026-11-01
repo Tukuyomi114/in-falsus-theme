@@ -1,6 +1,6 @@
 {
   "name": "@local/in-falsus",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "type": "module",
   "main": "index.js",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/Tukuyomi114/in-falsus-theme.git"
   },
-  "description": "In Falsus 风格主题：深板岩底色、冷青/品红双色、原创碎玻璃棱镜品牌标、切角薄板聊天区与开场影片",
+  "description": "In Falsus 风格主题（双皮肤）：深色是梅的冷青，浅色是妮娅的酒红；原创碎玻璃棱镜品牌标、切角薄板聊天区与开场影片",
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
