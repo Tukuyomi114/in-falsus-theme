@@ -203,8 +203,17 @@ export function apply(root) {
           const file = join(MEDIA_DIR, name);
           const stat = statSync(file);
           const body = readFileSync(file);
+          const dot = name.lastIndexOf('.');
+          const extension = dot >= 0 ? name.slice(dot).toLowerCase() : '';
+          const CONTENT_TYPES = {
+            '.mp4': 'video/mp4',
+            '.webp': 'image/webp',
+            '.png': 'image/png',
+            '.jpg': 'image/jpeg',
+            '.svg': 'image/svg+xml',
+          };
           res.writeHead(200, {
-            'content-type': 'video/mp4',
+            'content-type': CONTENT_TYPES[extension] || 'application/octet-stream',
             'content-length': String(stat.size),
             'cache-control': 'no-store',
             'accept-ranges': 'none',

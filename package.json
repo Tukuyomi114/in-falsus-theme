@@ -21,7 +21,8 @@
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
-    "media/*.mp4"
+    "media/*.mp4",
+    "media/*.webp"
   ],
   "dsh": {
     "manifestVersion": 1,

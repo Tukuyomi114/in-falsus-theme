@@ -1124,6 +1124,11 @@ window.__ModuleLoader__.load({
       /* Same vertical lift as the panel pages, but a touch stronger so it reads
          on the dark wine ground, plus a more visible diamond lattice. */
       'body:not([data-ds-dark-theme]) :is(.an3WzG_root,.mP3x-q_centerCol,[class*="AnXs9G_panel"]){background-image:linear-gradient(180deg, rgba(240, 190, 210, 0.04) 0%, rgba(236, 168, 196, 0.16) 48%, rgba(248, 158, 196, 0.40) 100%) !important;}',
+      '/* The key visual split in two: 妮雅 on the left, 梅 on the right, both turned',
+      '   into faint tinted ghosts and parked at the bottom of the chat background. */',
+      'body:not([data-ds-dark-theme]) .an3WzG_root{background-image:url(/in-falsus/media/niya-wine.webp),linear-gradient(180deg, rgba(240, 190, 210, 0.04) 0%, rgba(236, 168, 196, 0.16) 48%, rgba(248, 158, 196, 0.40) 100%) !important;background-position:center 44%,center !important;background-size:auto 78%,100% 100% !important;background-repeat:no-repeat !important;}',
+      /* The cyan skin gets its own lead: 梅, same treatment, one layer. */
+      'body[data-ds-dark-theme] .an3WzG_root{background-image:url(/in-falsus/media/mei-cyan.webp),linear-gradient(180deg, rgba(198, 212, 226, 0) 0%, rgba(198, 212, 226, 0.06) 50%, rgba(198, 212, 226, 0.20) 100%) !important;background-position:center 40%,center !important;background-size:auto 78%,100% 100% !important;background-repeat:no-repeat !important;}',
       'body:not([data-ds-dark-theme]) .an3WzG_root::after{background-image:repeating-linear-gradient(45deg, rgba(255, 178, 212, 0.18) 0 1px, transparent 1px 20px),repeating-linear-gradient(-45deg, rgba(255, 178, 212, 0.18) 0 1px, transparent 1px 20px) !important;}',
 
       /* Settings dialog: its own overlay, outside the frame subtree. */
